@@ -1,0 +1,8 @@
+JS异步编程的理解
+JS异步模式，不会等待这个异步逻辑结束才会进行下一步，而是会把这个异步逻辑挂起来到web APIS，等到同步逻辑执行完之后，EventLoop监听消息队列有没有需要执行的异步操作，然后压入调用栈，执行异步操作
+EventLoop 监听消息队列中有没有需要执行的任务
+消息队列 待办的任务，通过Eventloop压入到调用栈执行逻辑
+宏任务
+ 重新回到回调队列末尾排队 setTimeOut
+微任务
+在当前任务执行完成后立马执行,提高应用的相应能力 Promise、MutationObserver、process.nexTick
